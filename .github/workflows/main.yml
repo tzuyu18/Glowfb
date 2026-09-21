@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: main
           submodules: recursive
@@ -100,7 +100,7 @@ jobs:
           cd ..
           mv Glow_FB_${{ env.GLOW_TAG }}_clean.ipa Glow_FB_${{ env.GLOW_TAG }}.ipa
 
-      - uses: softprops/action-gh-release@v2.0.1
+      - uses: softprops/action-gh-release@v3
         with:
           tag_name: glow-fb-${{ env.GLOW_TAG }}
           name: Glow_FB ${{ env.GLOW_TAG }}
